@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛡️ Odin's LARF Quest: Viking Itinerary 🛡️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Almendra:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --viking-gold: #d4af37;
+            --fjord-blue: #1a3c5e;
+            --earth-brown: #2c1810;
+            --fur-beige: #f4e4bc;
+            --rune-green: #228B22;
+        }
+        body {
+            font-family: 'Almendra', serif;
+            background: linear-gradient(rgba(42,24,16,0.8), rgba(42,24,16,0.8)), url('https://cdn.pixabay.com/photo/2020/07/06/17/57/viking-ship-5377740_1280.jpg') center/cover fixed;
+            color: var(--fur-beige);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.6);
+            border-radius: 0;
+            padding: 20px;
+            position: relative;
+            min-height: 100vh;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, var(--fjord-blue), var(--earth-brown));
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--viking-gold);
+            animation: fadeInDown 1s ease-out;
+        }
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8em;
+            color: var(--viking-gold);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            font-style: italic;
+            color: var(--fur-beige);
+            margin-top: 10px;
+        }
+        .shield-icon {
+            width: 60px;
+            height: 60px;
+            fill: var(--viking-gold);
+            margin: 10px auto;
+            display: block;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--viking-gold);
+            border-left: 5px solid var(--rune-green);
+            padding-left: 15px;
+            margin-top: 40px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(244, 228, 188, 0.05);
+            border: 2px solid var(--viking-gold);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--fjord-blue);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        th {
+            background: var(--earth-brown);
+            color: var(--viking-gold);
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+        }
+        tr:hover {
+            transform: scale(1.02);
+            background: rgba(34,139,34,0.1);
+        }
+        .must-see {
+            font-weight: bold;
+            color: var(--viking-gold);
+            background: rgba(212,175,55,0.2);
+            position: relative;

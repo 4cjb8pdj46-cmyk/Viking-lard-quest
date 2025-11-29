@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,5 +104,231 @@
             color: var(--viking-gold);
             background: rgba(212,175,55,0.2);
             position: relative;
-            
-            
+        }
+        .must-see::before {
+            content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDBMMCAxMkwzIDMubjk0TDkuMDQgOS4wNEwxMiAxMkwxNC45NiA5LjA0TDE5IDUuMDZMMTkgMTRMMjQgMTJMMjQgMFoiIGZpbGw9IiNERDRBRDM3Ii8+Cjwvc3ZnPgo='); /* Simple shield SVG */
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .extra {
+            color: var(--rune-green);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(42,24,16,0.5);
+            border-left: 3px solid var(--viking-gold);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        li:hover {
+            background: rgba(212,175,55,0.1);
+        }
+        .tips {
+            background: linear-gradient(to right, var(--rune-green), var(--earth-brown));
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid var(--viking-gold);
+            animation: fadeIn 1s ease-out;
+        }
+        .schedule-img, .map-img {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            display: block;
+            border: 2px solid var(--viking-gold);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+        .schedule-img:hover, .map-img:hover {
+            transform: scale(1.2);
+        }
+        .zoom-container {
+            overflow: auto;
+            max-height: 600px;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.9em;
+            color: var(--fur-beige);
+            border-top: 1px solid var(--fjord-blue);
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            table { font-size: 0.9em; overflow-x: auto; display: block; }
+            .container { padding: 10px; }
+            .schedule-img, .map-img { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <svg class="shield-icon" viewBox="0 0 100 100">
+                <path d="M50 0 L10 30 L10 80 L50 100 L90 80 L90 30 Z" fill="#d4af37" stroke="#000" stroke-width="2"/>
+                <text x="50" y="55" font-family="Cinzel" font-size="20" text-anchor="middle" fill="#000">ᚦ</text> <!-- Rune for Thor -->
+            </svg>
+            <h1>🛡️ Odin's LARF Quest 🛡️</h1>
+            <p class="subtitle">Viking Weekend Itinerary - Saturday, November 29, 2025</p>
+        </div>
+        
+        <h2>⚔️ The Saga Overview ⚔️</h2>
+        <ul>
+            <li><strong>Arrival:</strong> 9:30 AM (gates ~9:45 AM)</li>
+            <li><strong>Departure:</strong> After 5:00 PM closing</li>
+            <li><strong>Focus:</strong> Openings/closings + one-time must-sees (Jameson Juggler, Adamo Ignis fire, Armored Joust, Glass Blowing demo, Washing Well Wenches) + unique Viking extras</li>
+            <li><strong>Total Trek:</strong> ~2 miles (3-10 min between spots; central hub = Village Commons by lake)</li>
+            <li><strong>Viking Oath:</strong> Norse battles, folk runes, mead rivers—forge your legend!</li>
+        </ul>
+        
+        <div class="tips">
+            <strong>Runestone Wisdom:</strong> Sturdy boots for fjord paths. Quaff mead (#67 Compass Rose). Feast on turkey legs (#152 Woodfield Meals). Skies: Mild 60s°F—cloak like a berserker! LARF app for ravens' whispers.
+        </div>
+        
+        <h2>🗺️ The Rune Timeline 🗺️</h2>
+        <div class="zoom-container">
+            <img src="schedule.jpg" alt="Full LARF Schedule Grid" class="schedule-img">
+        </div>
+        
+        <h2>🗺️ The Village Map 🗺️</h2>
+        <div class="zoom-container">
+            <img src="map.jpg" alt="Festival Map" class="map-img"> <!-- Upload your map image as 'map.jpg' to GitHub repo -->
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Time Slot</th>
+                    <th>Quest</th>
+                    <th>Longhall (Map Guide)</th>
+                    <th>Glory & Lore</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="must-see">
+                    <td>9:30-9:45 AM</td>
+                    <td class="must-see">Arrival & Entry</td>
+                    <td>Front Gate (south fjord)</td>
+                    <td>Anchor ships south off River Rd. Arm with Viking steel (#1 Spirit Works). *Trek: N/A.*</td>
+                </tr>
+                <tr class="must-see">
+                    <td>9:45-10:00 AM</td>
+                    <td class="must-see"><strong>Opening Ceremonies</strong><br>Royal Welcome + Opening Cannon</td>
+                    <td>Front Gate → Village Commons (central)</td>
+                    <td>Queen's hail + thunderous BOOM! Forge pics! *Trek: 1 min north.*</td>
+                </tr>
+                <tr class="must-see">
+                    <td>10:15-10:30 AM</td>
+                    <td class="must-see"><strong>Must-See: Jameson the Juggler</strong> (Once)</td>
+                    <td>Queen Stage (central-north)</td>
+                    <td>Comedy runes & juggler's saga. Crowd revels! *Trek: 2-3 min.*</td>
+                </tr>
+                <tr>
+                    <td>10:30-11:00 AM</td>
+                    <td class="extra">Unique Extra: Mad Erik's Magic Show + Explore</td>
+                    <td>Ordo Arena (central-east woods) → Badger Blvd (west)</td>
+                    <td>Arcane illusions + hoard shops (#91 Jewelry). Ale brew (#88 Kitchen). *Trek: 3-5 min west.*</td>
+                </tr>
+                <tr class="must-see">
+                    <td>11:00-11:30 AM</td>
+                    <td class="must-see"><strong>Must-See: Glass Blowing Demo</strong> (Once)</td>
+                    <td>Glass Blowing Stage (west Badger Blvd)</td>
+                    <td>Forge Viking chalice + artisan lore. Claim relic? *Trek: 2 min.*</td>
+                </tr>
+                <tr class="must-see">
+                    <td>11:30 AM-12:15 PM</td>
+                    <td class="must-see">Unique Extra: Parade to Joust + <strong>Must-See: Adamo Ignis Fire</strong> (Once)</td>
+                    <td>Joust Arena (east dragon spire)</td>
+                    <td>Warrior march to flame runes/danger. Berserker thrill! *Trek: 5-7 min east. Claim thrones early.*</td>
+                </tr>
+                <tr class="must-see">
+                    <td>12:15-12:45 PM</td>
+                    <td class="must-see"><strong>Must-See: Armored Joust</strong> (Once) + Break</td>
+                    <td>Joust Arena</td>
+                    <td>Knight clashes & lance storms. Epic fray! *Trek: Hold ground. 10-min saga breath.*</td>
+                </tr>
+                <tr class="must-see">
+                    <td>12:45-1:15 PM</td>
+                    <td class="must-see"><strong>Must-See: Washing Well Wenches</strong> (Once) + Lunch</td>
+                    <td>Yonder Stage (northwest lake) → Tasting Glen (central)</td>
+                    <td>Siren songs + feast haunch (#152 Meals). *Trek: 4 min. 20-min hall revel.*</td>
+                </tr>
+                <tr>
+                    <td>1:15-1:45 PM</td>
+                    <td class="extra">Unique Extra: Chaste Treasure Bawdy Songs + Buffer</td>
+                    <td>Painted Badger Pub Stage (west)</td>
+                    <td>Ribald shanties. *Trek: 3-5 min west. Hearth rest.*</td>
+                </tr>
+                <tr>
+                    <td>1:45-2:15 PM</td>
+                    <td class="extra">Unique Extra: Birds of the Gauntlet Falconry</td>
+                    <td>Joust Arena area (east)</td>
+                    <td>Storm wings & eagle omens. Norse bond! *Trek: 5 min east. Optional saga.*</td>
+                </tr>
+                <tr>
+                    <td>2:15-2:45 PM</td>
+                    <td class="extra">Unique Extra: Dynamic World Music + Stroll</td>
+                    <td>Compass Rose Stage (central)</td>
+                    <td>Nordic harp echoes. Mead muse! *Trek: 3 min. Quaff deep.*</td>
+                </tr>
+                <tr>
+                    <td>2:45-3:30 PM</td>
+                    <td>Free Time: Shops & Mead Tasting</td>
+                    <td>Flexible → Tasting Glen</td>
+                    <td>Hide armors (#144), relics (#106). Sat nectar rite! *~45 min wander.*</td>
+                </tr>
+                <tr>
+                    <td>3:30-4:00 PM</td>
+                    <td class="extra">Unique Extra: Sword/Rapier Exhibition</td>
+                    <td>Royal Pavilion (central-north)</td>
+                    <td>Blade dances & honor trials. *Trek: 2 min north.*</td>
+                </tr>
+                <tr>
+                    <td>4:00-4:30 PM</td>
+                    <td>Buffer: Last Shops or Music</td>
+                    <td>Badger Blvd or Compass Rose</td>
+                    <td>Rover's Way saga peek. Hoard final! *Flexible trek.*</td>
+                </tr>
+                <tr class="must-see">
+                    <td>4:30-5:00 PM</td>
+                    <td class="must-see"><strong>Closing Ceremonies</strong><br>Closing Revels + Closing Cannon</td>
+                    <td>Queen Stage → Front Gate</td>
+                    <td>Valhalla toasts & final thunder. Eternal huzzah! *Trek: 5-10 min south.*</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>ᚦ Why This Saga Endures ᚦ</h2>
+        <ul>
+            <li><strong>Etched in Stone:</strong> Times forged from official runes (e.g., Adamo 11:30 no clash; Wenches 12:45 post-feast).</li>
+            <li><strong>One Eternal Strike:</strong> Prime halls for valor (dawn for mirth, zenith for fray).</li>
+            <li><strong>Balanced Edda:</strong> 40% quests, 30% halls, 30% free for raven hunts & axe throws.</li>
+            <li><strong>Swift Oar:</strong> Central anchors—spare the weary legs.</li>
+        </ul>
+        
+        <footer>
+            <p>Forged by Grok's Anvil | Hail to your Viking conquest! 🛡️🍻 | Skål from the gods.</p>
+        </footer>
+    </div>
+</body>
+</html>
